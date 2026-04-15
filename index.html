@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório Comparativo Google Ads</title>
+    <!-- Tailwind CSS para o visual -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js para os gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800 min-h-screen p-4 md:p-8">
+
+    <div class="max-w-6xl mx-auto">
+        <!-- Cabeçalho -->
+        <header class="mb-8">
+            <h1 class="text-2xl font-bold text-gray-800">Relatório Comparativo Google Ads</h1>
+            <p class="text-gray-500">Período: 01 a 15 de Março vs. 01 a 15 de Abril de 2026</p>
+        </header>
+
+        <!-- Cartões de Resumo -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+            
+            <!-- Cliques -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="p-2 bg-blue-50 text-blue-600 rounded-lg">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path></svg>
+                    </div>
+                    <div class="flex items-center text-sm font-medium text-green-600">
+                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        116.1%
+                    </div>
+                </div>
+                <h3 class="text-gray-500 text-sm font-medium">Cliques</h3>
+                <p class="text-2xl font-bold text-gray-800">134</p>
+            </div>
+
+            <!-- Conversões -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="p-2 bg-blue-50 text-blue-600 rounded-lg">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <div class="flex items-center text-sm font-medium text-green-600">
+                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        366.7%
+                    </div>
+                </div>
+                <h3 class="text-gray-500 text-sm font-medium">Conversões</h3>
+                <p class="text-2xl font-bold text-gray-800">14</p>
+            </div>
+
+            <!-- Taxa de Conversão -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="p-2 bg-blue-50 text-blue-600 rounded-lg">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                    </div>
+                    <div class="flex items-center text-sm font-medium text-green-600">
+                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        115.9%
+                    </div>
+                </div>
+                <h3 class="text-gray-500 text-sm font-medium">Taxa de Conversão</h3>
+                <p class="text-2xl font-bold text-gray-800">10.45%</p>
+            </div>
+
+            <!-- Não Converteram -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="p-2 bg-blue-50 text-blue-600 rounded-lg">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path></svg>
+                    </div>
+                    <div class="flex items-center text-sm font-medium text-orange-600">
+                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        103.4%
+                    </div>
+                </div>
+                <h3 class="text-gray-500 text-sm font-medium">Não Converteram (Saídas)</h3>
+                <p class="text-2xl font-bold text-gray-800">120</p>
+            </div>
+
+            <!-- Custo Total -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="p-2 bg-blue-50 text-blue-600 rounded-lg">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <div class="flex items-center text-sm font-medium text-orange-600">
+                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        61.2%
+                    </div>
+                </div>
+                <h3 class="text-gray-500 text-sm font-medium">Custo Total</h3>
+                <p class="text-2xl font-bold text-gray-800">R$ 703</p>
+            </div>
+
+            <!-- Custo / Conv -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="p-2 bg-blue-50 text-blue-600 rounded-lg">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path></svg>
+                    </div>
+                    <div class="flex items-center text-sm font-medium text-green-600">
+                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path></svg>
+                        65.4%
+                    </div>
+                </div>
+                <h3 class="text-gray-500 text-sm font-medium">Custo / Conv. (CPA)</h3>
+                <p class="text-2xl font-bold text-gray-800">R$ 50,18</p>
+            </div>
+
+        </div>
+
+        <!-- Seção de Gráficos -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            <!-- Gráfico 1: Volume -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <h3 class="text-lg font-semibold text-gray-800 mb-6">Volume de Tráfego e Resultados</h3>
+                <div class="relative h-80">
+                    <canvas id="volumeChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Gráfico 2: Eficiência -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                <h3 class="text-lg font-semibold text-gray-800 mb-6">Eficiência de Investimento (CPA)</h3>
+                <div class="relative h-80">
+                    <canvas id="efficiencyChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Gráfico 3: Funil -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 lg:col-span-2">
+                <h3 class="text-lg font-semibold text-gray-800 mb-6">Composição do Tráfego: Desistências vs. Conversões</h3>
+                <div class="relative h-80">
+                    <canvas id="funnelChart"></canvas>
+                </div>
+                <p class="mt-4 text-sm text-gray-500">
+                    Embora o número absoluto de pessoas que saíram sem comprar tenha aumentado (de 59 para 120) devido ao maior volume de tráfego, 
+                    a <strong>proporção</strong> de conversão melhorou substancialmente (subindo de ~4,8% para ~10,4%).
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Alerta de Insight -->
+        <div class="mt-8 bg-blue-600 text-white p-6 rounded-xl shadow-lg mb-8">
+            <div class="flex items-center gap-3 mb-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                <h3 class="text-lg font-bold">Insight Principal</h3>
+            </div>
+            <p class="text-blue-50 leading-relaxed">
+                A sua campanha de Abril está apresentando uma saúde financeira muito superior. 
+                Apesar de ter gasto 61% a mais, o volume de conversões cresceu 366%, o que resultou 
+                numa <strong>redução de 65% no custo de aquisição</strong>. O algoritmo "aprendeu" quem é o seu 
+                público ideal.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Script para renderizar os gráficos -->
+    <script>
+        const labels = ['Março (1-15)', 'Abril (1-15)'];
+
+        // Gráfico de Volume
+        const ctxVolume = document.getElementById('volumeChart').getContext('2d');
+        new Chart(ctxVolume, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'Cliques',
+                        data: [62, 134],
+                        backgroundColor: '#3b82f6', // blue-500
+                        borderRadius: 4
+                    },
+                    {
+                        label: 'Conversões',
+                        data: [3, 14],
+                        backgroundColor: '#ef4444', // red-500
+                        borderRadius: 4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { position: 'top' } },
+                scales: {
+                    y: { beginAtZero: true, grid: { borderDash: [4, 4] } },
+                    x: { grid: { display: false } }
+                }
+            }
+        });
+
+        // Gráfico de Eficiência (Mix)
+        const ctxEfficiency = document.getElementById('efficiencyChart').getContext('2d');
+        new Chart(ctxEfficiency, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        type: 'line',
+                        label: 'Custo por Conv. (R$)',
+                        data: [145, 50.18],
+                        borderColor: '#ef4444',
+                        backgroundColor: '#ef4444',
+                        borderWidth: 3,
+                        pointRadius: 5,
+                        yAxisID: 'y1',
+                    },
+                    {
+                        type: 'bar',
+                        label: 'Custo Total (R$)',
+                        data: [436, 703],
+                        backgroundColor: 'rgba(148, 163, 184, 0.4)', // slate-400
+                        borderRadius: 4,
+                        yAxisID: 'y',
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { position: 'top' } },
+                scales: {
+                    y: { 
+                        type: 'linear', 
+                        display: true, 
+                        position: 'left',
+                        title: { display: true, text: 'Custo Total' },
+                        grid: { borderDash: [4, 4] }
+                    },
+                    y1: { 
+                        type: 'linear', 
+                        display: true, 
+                        position: 'right',
+                        title: { display: true, text: 'Custo/Conv' },
+                        grid: { drawOnChartArea: false }
+                    },
+                    x: { grid: { display: false } }
+                }
+            }
+        });
+
+        // Gráfico de Funil (Barras Empilhadas)
+        const ctxFunnel = document.getElementById('funnelChart').getContext('2d');
+        new Chart(ctxFunnel, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'Não Converteram (Saíram)',
+                        data: [59, 120],
+                        backgroundColor: '#cbd5e1', // slate-300
+                    },
+                    {
+                        label: 'Converteram (Sucesso)',
+                        data: [3, 14],
+                        backgroundColor: '#22c55e', // green-500
+                        borderRadius: { topLeft: 4, topRight: 4, bottomLeft: 0, bottomRight: 0 }
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { 
+                    legend: { position: 'top' },
+                    tooltip: { mode: 'index', intersect: false }
+                },
+                scales: {
+                    y: { 
+                        stacked: true, 
+                        beginAtZero: true,
+                        grid: { borderDash: [4, 4] }
+                    },
+                    x: { 
+                        stacked: true,
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
