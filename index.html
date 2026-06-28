@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório Comparativo Google Ads (Maio x Junho)</title>
+    <!-- Tailwind CSS para um visual moderno e limpo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js para os gráficos interativos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Fonte Inter para excelente legibilidade -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            body {
+                background-color: white;
+                padding: 0;
+            }
+            .print-card {
+                border: 1px solid #e2e8f0 !important;
+                box-shadow: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen transition-all duration-300">
+
+    <div class="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 py-5 md:py-10">
+        
+        <!-- Cabeçalho Principal -->
+        <header class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6 md:mb-8 pb-5 md:pb-6 border-b border-slate-200">
+            <div>
+                <div class="flex items-center gap-1.5 md:gap-2 text-blue-600 font-semibold text-xs md:text-sm uppercase tracking-wider mb-1 md:mb-2">
+                    <span class="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-blue-600"></span>
+                    Análise de Desempenho Real
+                </div>
+                <h1 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">Relatório Comparativo Google Ads</h1>
+                <p class="text-xs sm:text-sm md:text-base text-slate-500 mt-1 md:mt-2">Período de análise: <strong class="text-slate-700">Maio (Completo)</strong> vs. <strong class="text-slate-700">01 a 26 de Junho de 2026</strong></p>
+            </div>
+        </header>
+
+        <!-- Cartões de Métricas (KPIs) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-6 md:mb-8">
+            
+            <!-- Vendas Totais (Destaque Principal) -->
+            <div class="bg-gradient-to-br from-emerald-500 to-teal-600 p-5 sm:p-6 rounded-2xl shadow-sm border border-emerald-600 print-card hover:shadow-md transition-shadow duration-200 text-white">
+                <div class="flex justify-between items-center mb-2 sm:mb-3 gap-2">
+                    <span class="text-emerald-50 text-xs sm:text-sm font-semibold uppercase tracking-wider truncate">Fechamento em Vendas</span>
+                    <span class="flex shrink-0 items-center text-[10px] sm:text-xs font-bold text-emerald-900 bg-emerald-300 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full">
+                        <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 mr-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        +774,1%
+                    </span>
+                </div>
+                <div class="flex items-baseline gap-2">
+                    <span class="text-2xl sm:text-3xl font-extrabold">R$ 16.608,50</span>
+                </div>
+                <div class="w-full bg-emerald-700/50 h-1.5 rounded-full mt-3 sm:mt-4 overflow-hidden">
+                    <div class="bg-white h-full rounded-full" style="width: 100%"></div>
+                </div>
+                <div class="flex justify-between text-[10px] sm:text-xs text-emerald-100 mt-2">
+                    <span>Maio: R$ 1.900,00</span>
+                    <span>Junho: R$ 16.608,50</span>
+                </div>
+            </div>
+
+            <!-- Retorno sobre Investimento (ROI) -->
+            <div class="bg-gradient-to-br from-indigo-500 to-blue-700 p-5 sm:p-6 rounded-2xl shadow-sm border border-indigo-600 print-card hover:shadow-md transition-shadow duration-200 text-white">
+                <div class="flex justify-between items-center mb-2 sm:mb-3 gap-2">
+                    <span class="text-indigo-50 text-xs sm:text-sm font-semibold uppercase tracking-wider truncate">Retorno (ROI / ROAS)</span>
+                    <span class="flex shrink-0 items-center text-[10px] sm:text-xs font-bold text-indigo-900 bg-indigo-300 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full border border-indigo-400">
+                        <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 mr-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        +892,4%
+                    </span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-2xl sm:text-3xl font-extrabold">12,49x</span>
+                    <p class="text-indigo-100 text-[11px] sm:text-xs mt-1 leading-snug">
+                        Ou seja: para cada <strong>R$ 1,00</strong> investido em anúncios, o seu negócio recebeu <strong>R$ 12,49</strong> de volta em vendas.
+                    </p>
+                </div>
+                <div class="w-full bg-indigo-800/50 h-1.5 rounded-full mt-3 sm:mt-4 overflow-hidden">
+                    <div class="bg-white h-full rounded-full" style="width: 100%"></div>
+                </div>
+                <div class="flex justify-between text-[10px] sm:text-xs text-indigo-100 mt-2">
+                    <span>Maio: 1,26x</span>
+                    <span>Junho: 12,49x</span>
+                </div>
+            </div>
+
+            <!-- Conversões -->
+            <div class="bg-white p-5 sm:p-6 rounded-2xl shadow-sm border border-slate-100 print-card hover:shadow-md transition-shadow duration-200">
+                <div class="flex justify-between items-center mb-2 sm:mb-3 gap-2">
+                    <span class="text-slate-400 text-xs sm:text-sm font-semibold uppercase tracking-wider truncate">Conversões (Leads)</span>
+                    <span class="flex shrink-0 items-center text-[10px] sm:text-xs font-bold text-emerald-600 bg-emerald-50 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full border border-emerald-100">
+                        <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 mr-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        +70,0%
+                    </span>
+                </div>
+                <div class="flex items-baseline gap-2">
+                    <span class="text-2xl sm:text-3xl font-extrabold text-slate-900">34</span>
+                    <span class="text-slate-400 text-xs sm:text-sm">vs 20 em Maio</span>
+                </div>
+                <div class="w-full bg-slate-100 h-1.5 rounded-full mt-3 sm:mt-4 overflow-hidden">
+                    <div class="bg-rose-500 h-full rounded-full" style="width: 100%"></div>
+                </div>
+                <div class="flex justify-between text-[10px] sm:text-xs text-slate-400 mt-2">
+                    <span>Maio: 20</span>
+                    <span>Junho: 34</span>
+                </div>
+            </div>
+
+            <!-- Custo por Conversão -->
+            <div class="bg-white p-5 sm:p-6 rounded-2xl shadow-sm border border-slate-100 print-card hover:shadow-md transition-shadow duration-200">
+                <div class="flex justify-between items-center mb-2 sm:mb-3 gap-2">
+                    <span class="text-slate-400 text-xs sm:text-sm font-semibold uppercase tracking-wider truncate">Custo por Conv. (CPA)</span>
+                    <span class="flex shrink-0 items-center text-[10px] sm:text-xs font-bold text-emerald-600 bg-emerald-50 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full border border-emerald-100">
+                        <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 mr-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 13l-7 7-7-7m14-6l-7 7-7-7"></path></svg>
+                        -48,1%
+                    </span>
+                </div>
+                <div class="flex items-baseline gap-2">
+                    <span class="text-2xl sm:text-3xl font-extrabold text-slate-900">R$ 39,05</span>
+                    <span class="text-slate-400 text-xs sm:text-sm">vs R$ 75,28 em Maio</span>
+                </div>
+                <div class="w-full bg-slate-100 h-1.5 rounded-full mt-3 sm:mt-4 overflow-hidden">
+                    <div class="bg-emerald-500 h-full rounded-full" style="width: 51%"></div>
+                </div>
+                <div class="flex justify-between text-[10px] sm:text-xs text-slate-400 mt-2">
+                    <span>Maio: R$ 75,28</span>
+                    <span>Junho: R$ 39,05</span>
+                </div>
+            </div>
+
+            <!-- Custo Total -->
+            <div class="bg-white p-5 sm:p-6 rounded-2xl shadow-sm border border-slate-100 print-card hover:shadow-md transition-shadow duration-200">
+                <div class="flex justify-between items-center mb-2 sm:mb-3 gap-2">
+                    <span class="text-slate-400 text-xs sm:text-sm font-semibold uppercase tracking-wider truncate">Investimento Total</span>
+                    <span class="flex shrink-0 items-center text-[10px] sm:text-xs font-bold text-emerald-600 bg-emerald-50 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full border border-emerald-100">
+                        <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 mr-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 13l-7 7-7-7m14-6l-7 7-7-7"></path></svg>
+                        -11,9%
+                    </span>
+                </div>
+                <div class="flex items-baseline gap-2">
+                    <span class="text-2xl sm:text-3xl font-extrabold text-slate-900">R$ 1.330</span>
+                    <span class="text-slate-400 text-xs sm:text-sm">vs R$ 1.510 em Maio</span>
+                </div>
+                <div class="w-full bg-slate-100 h-1.5 rounded-full mt-3 sm:mt-4 overflow-hidden">
+                    <div class="bg-blue-400 h-full rounded-full" style="width: 88%"></div>
+                </div>
+                <div class="flex justify-between text-[10px] sm:text-xs text-slate-400 mt-2">
+                    <span>Maio: R$ 1.510</span>
+                    <span>Junho: R$ 1.330</span>
+                </div>
+            </div>
+
+            <!-- Taxa de Conversão -->
+            <div class="bg-white p-5 sm:p-6 rounded-2xl shadow-sm border border-slate-100 print-card hover:shadow-md transition-shadow duration-200">
+                <div class="flex justify-between items-center mb-2 sm:mb-3 gap-2">
+                    <span class="text-slate-400 text-xs sm:text-sm font-semibold uppercase tracking-wider truncate">Taxa de Conversão</span>
+                    <span class="flex shrink-0 items-center text-[10px] sm:text-xs font-bold text-emerald-600 bg-emerald-50 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full border border-emerald-100">
+                        <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 mr-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        +18,07 pp
+                    </span>
+                </div>
+                <div class="flex items-baseline gap-2">
+                    <span class="text-2xl sm:text-3xl font-extrabold text-slate-900">27,64%</span>
+                    <span class="text-slate-400 text-xs sm:text-sm">vs 9,57% em Maio</span>
+                </div>
+                <div class="w-full bg-slate-100 h-1.5 rounded-full mt-3 sm:mt-4 overflow-hidden">
+                    <div class="bg-indigo-500 h-full rounded-full" style="width: 100%"></div>
+                </div>
+                <div class="flex justify-between text-[10px] sm:text-xs text-slate-400 mt-2">
+                    <span>Maio: 9,57%</span>
+                    <span>Junho: 27,64%</span>
+                </div>
+            </div>
+
+            <!-- Cliques -->
+            <div class="bg-white p-5 sm:p-6 rounded-2xl shadow-sm border border-slate-100 print-card hover:shadow-md transition-shadow duration-200">
+                <div class="flex justify-between items-center mb-2 sm:mb-3 gap-2">
+                    <span class="text-slate-400 text-xs sm:text-sm font-semibold uppercase tracking-wider truncate">Tráfego (Cliques)</span>
+                    <span class="flex shrink-0 items-center text-[10px] sm:text-xs font-bold text-slate-500 bg-slate-100 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full border border-slate-200" title="Queda em volume, mas com aumento de qualidade">
+                        <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 mr-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 13l-7 7-7-7m14-6l-7 7-7-7"></path></svg>
+                        -41,1%
+                    </span>
+                </div>
+                <div class="flex items-baseline gap-2">
+                    <span class="text-2xl sm:text-3xl font-extrabold text-slate-900">123</span>
+                    <span class="text-slate-400 text-xs sm:text-sm">vs 209 em Maio</span>
+                </div>
+                <div class="w-full bg-slate-100 h-1.5 rounded-full mt-3 sm:mt-4 overflow-hidden">
+                    <div class="bg-slate-400 h-full rounded-full" style="width: 58%"></div>
+                </div>
+                <div class="flex justify-between text-[10px] sm:text-xs text-slate-400 mt-2">
+                    <span>Maio: 209</span>
+                    <span>Junho: 123</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Seção de Gráficos -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-6 md:mb-8">
+            
+            <!-- Gráfico de Volume -->
+            <div class="bg-white p-4 sm:p-6 rounded-2xl shadow-sm border border-slate-100 print-card">
+                <div class="mb-4">
+                    <h3 class="text-base sm:text-lg font-bold text-slate-900">Resultados e Tráfego</h3>
+                    <p class="text-[11px] sm:text-xs text-slate-500">Comparativo de cliques gerados e conversões obtidas</p>
+                </div>
+                <div class="relative h-64 sm:h-72">
+                    <canvas id="volumeChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Gráfico de Eficiência -->
+            <div class="bg-white p-4 sm:p-6 rounded-2xl shadow-sm border border-slate-100 print-card">
+                <div class="mb-4">
+                    <h3 class="text-base sm:text-lg font-bold text-slate-900">Eficiência de Custo (CPA)</h3>
+                    <p class="text-[11px] sm:text-xs text-slate-500">Evolução do Custo por Conversão frente ao Investimento</p>
+                </div>
+                <div class="relative h-64 sm:h-72">
+                    <canvas id="efficiencyChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Gráfico de ROI -->
+            <div class="bg-white p-4 sm:p-6 rounded-2xl shadow-sm border border-slate-100 print-card lg:col-span-2">
+                <div class="mb-4">
+                    <h3 class="text-base sm:text-lg font-bold text-slate-900">Retorno sobre o Investimento (ROI)</h3>
+                    <p class="text-[11px] sm:text-xs text-slate-500">Comparativo direto entre o valor investido e a receita gerada em vendas</p>
+                </div>
+                <div class="relative h-64 sm:h-72">
+                    <canvas id="roiChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabela Estruturada Consolidada -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-100 print-card overflow-hidden mb-8">
+            <div class="p-4 sm:p-6 border-b border-slate-100">
+                <h3 class="text-base sm:text-lg font-bold text-slate-900">Tabela de Dados Consolidados</h3>
+                <p class="text-[11px] sm:text-xs text-slate-500">Valores absolutos de desempenho e variações percentuais</p>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse min-w-[500px]">
+                    <thead>
+                        <tr class="bg-slate-50 border-b border-slate-200/80 text-[10px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider">
+                            <th class="p-3 sm:p-4 pl-4 sm:pl-6">Métrica Comercial</th>
+                            <th class="p-3 sm:p-4">Maio</th>
+                            <th class="p-3 sm:p-4">Junho (01-26)</th>
+                            <th class="p-3 sm:p-4 text-center">Variação Absoluta</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-xs sm:text-sm font-medium text-slate-700">
+                        <tr class="hover:bg-slate-50/50 transition-colors">
+                            <td class="p-3 sm:p-4 pl-4 sm:pl-6 font-semibold text-emerald-700">Vendas (Receita)</td>
+                            <td class="p-3 sm:p-4">R$ 1.900,00</td>
+                            <td class="p-3 sm:p-4">R$ 16.608,50</td>
+                            <td class="p-3 sm:p-4 text-center text-emerald-600 font-bold bg-emerald-50/50">+774,13%</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50/50 transition-colors">
+                            <td class="p-3 sm:p-4 pl-4 sm:pl-6 font-semibold text-indigo-700">Retorno (ROI / ROAS)</td>
+                            <td class="p-3 sm:p-4">1,26x</td>
+                            <td class="p-3 sm:p-4">12,49x</td>
+                            <td class="p-3 sm:p-4 text-center text-emerald-600 font-bold bg-emerald-50/50">+892,4%</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50/50 transition-colors">
+                            <td class="p-3 sm:p-4 pl-4 sm:pl-6 font-semibold text-slate-900">Conversões (Leads)</td>
+                            <td class="p-3 sm:p-4">20</td>
+                            <td class="p-3 sm:p-4">34</td>
+                            <td class="p-3 sm:p-4 text-center text-emerald-600 font-bold bg-emerald-50/50">+70,00%</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50/50 transition-colors">
+                            <td class="p-3 sm:p-4 pl-4 sm:pl-6 font-semibold text-slate-900">Taxa de Conversão</td>
+                            <td class="p-3 sm:p-4">9,57%</td>
+                            <td class="p-3 sm:p-4">27,64%</td>
+                            <td class="p-3 sm:p-4 text-center text-emerald-600 font-bold bg-emerald-50/50">+18,07 pp</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50/50 transition-colors">
+                            <td class="p-3 sm:p-4 pl-4 sm:pl-6 font-semibold text-slate-900">CPA (Custo por Conv.)</td>
+                            <td class="p-3 sm:p-4">R$ 75,28</td>
+                            <td class="p-3 sm:p-4">R$ 39,05</td>
+                            <td class="p-3 sm:p-4 text-center text-emerald-600 font-bold bg-emerald-50/50">-48,13%</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50/50 transition-colors">
+                            <td class="p-3 sm:p-4 pl-4 sm:pl-6 font-semibold text-slate-900">Investimento Realizado</td>
+                            <td class="p-3 sm:p-4">R$ 1.510,00</td>
+                            <td class="p-3 sm:p-4">R$ 1.330,00</td>
+                            <td class="p-3 sm:p-4 text-center text-emerald-600 font-bold bg-emerald-50/50">-11,92%</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50/50 transition-colors">
+                            <td class="p-3 sm:p-4 pl-4 sm:pl-6 font-semibold text-slate-900">Cliques (Tráfego)</td>
+                            <td class="p-3 sm:p-4">209</td>
+                            <td class="p-3 sm:p-4">123</td>
+                            <td class="p-3 sm:p-4 text-center text-slate-500 font-bold bg-slate-50/50">-41,15%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts de Configuração dos Gráficos e Lógica -->
+    <script>
+        // Definições de Estilo Globais para o Chart.js
+        Chart.defaults.font.family = 'Inter';
+        Chart.defaults.color = '#64748b';
+
+        const labelsMonths = ['Maio', 'Junho (01-26)'];
+
+        // Valores de Referência
+        const cpaMayVal = 75.28;
+        const cpaJuneVal = 39.05;
+
+        // 1. Gráfico de Volume (Cliques vs Conversões)
+        const ctxVolume = document.getElementById('volumeChart').getContext('2d');
+        const volumeChart = new Chart(ctxVolume, {
+            type: 'bar',
+            data: {
+                labels: labelsMonths,
+                datasets: [
+                    {
+                        label: 'Cliques (Tráfego)',
+                        data: [209, 123],
+                        backgroundColor: '#94a3b8', // Cinza/Slate indicando topo de funil
+                        borderRadius: 6,
+                        barThickness: 45
+                    },
+                    {
+                        label: 'Conversões',
+                        data: [20, 34],
+                        backgroundColor: '#f43f5e', // Rosa-avermelhado
+                        borderRadius: 6,
+                        barThickness: 45
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: { boxWidth: 12, usePointStyle: true, pointStyle: 'circle', font: { weight: 600 } }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: { borderDash: [5, 5], color: '#f1f5f9' }
+                    },
+                    x: {
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+
+        // 2. Gráfico de Eficiência (CPA vs Investimento)
+        const ctxEfficiency = document.getElementById('efficiencyChart').getContext('2d');
+        const efficiencyChart = new Chart(ctxEfficiency, {
+            type: 'bar',
+            data: {
+                labels: labelsMonths,
+                datasets: [
+                    {
+                        type: 'line',
+                        label: 'Custo por Conversão (CPA em R$)',
+                        data: [cpaMayVal, cpaJuneVal],
+                        borderColor: '#10b981', // Verde esmeralda
+                        backgroundColor: '#10b981',
+                        borderWidth: 3,
+                        pointRadius: 6,
+                        pointHoverRadius: 8,
+                        yAxisID: 'yCPA',
+                    },
+                    {
+                        type: 'bar',
+                        label: 'Investimento Efetuado (R$)',
+                        data: [1510, 1330],
+                        backgroundColor: '#cbd5e1', // Slate claro
+                        borderRadius: 6,
+                        barThickness: 45,
+                        yAxisID: 'yCusto'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: { boxWidth: 12, usePointStyle: true, pointStyle: 'circle', font: { weight: 600 } }
+                    }
+                },
+                scales: {
+                    yCusto: {
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        title: { display: true, text: 'Investimento Total (R$)', font: { weight: 'bold' } },
+                        grid: { borderDash: [5, 5], color: '#f1f5f9' }
+                    },
+                    yCPA: {
+                        type: 'linear',
+                        display: true,
+                        position: 'right',
+                        title: { display: true, text: 'CPA (R$)', font: { weight: 'bold' } },
+                        grid: { drawOnChartArea: false }
+                    },
+                    x: {
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+
+        // 3. Gráfico de Retorno (Vendas vs Investimento)
+        const ctxRoi = document.getElementById('roiChart').getContext('2d');
+        const roiChart = new Chart(ctxRoi, {
+            type: 'bar',
+            data: {
+                labels: labelsMonths,
+                datasets: [
+                    {
+                        label: 'Investimento em Ads (R$)',
+                        data: [1510, 1330],
+                        backgroundColor: '#3b82f6', // Azul
+                        borderRadius: 6,
+                        barThickness: 50
+                    },
+                    {
+                        label: 'Vendas Geradas (R$)',
+                        data: [1900, 16608.50],
+                        backgroundColor: '#10b981', // Verde
+                        borderRadius: 6,
+                        barThickness: 50
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: { boxWidth: 12, usePointStyle: true, pointStyle: 'circle', font: { weight: 600 } }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed.y !== null) {
+                                    label += new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(context.parsed.y);
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: { borderDash: [5, 5], color: '#f1f5f9' },
+                        ticks: {
+                            callback: function(value, index, values) {
+                                return 'R$ ' + value.toLocaleString('pt-BR');
+                            }
+                        }
+                    },
+                    x: {
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+
+        // Exportação de CSV estruturada para Excel
+        function exportToCSV() {
+            const rows = [
+                ["Metrica", "Maio", "Junho (01-26)", "Variacao"],
+                ["Vendas (Receita)", "1900.00", "16608.50", "+774.13%"],
+                ["Retorno (ROI)", "1.26x", "12.49x", "+892.4%"],
+                ["Conversoes (Leads)", "20", "34", "+70.00%"],
+                ["Taxa de Conversao", "9.57%", "27.64%", "+18.07pp"],
+                ["CPA (R$)", "75.28", "39.05", "-48.13%"],
+                ["Investimento (R$)", "1510.00", "1330.00", "-11.92%"],
+                ["Cliques", "209", "123", "-41.15%"]
+            ];
+
+            let csvContent = "data:text/csv;charset=utf-8,\uFEFF";
+            rows.forEach(function(rowArray) {
+                let row = rowArray.join(";");
+                csvContent += row + "\r\n";
+            });
+
+            const encodedUri = encodeURI(csvContent);
+            const link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", "comparativo_google_ads_maio_junho_real.csv");
+            document.body.appendChild(link);
+
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
